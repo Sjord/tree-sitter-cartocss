@@ -1,0 +1,32 @@
+{
+  "name": "tree-sitter-cartocss",
+  "version": "0.0.1",
+  "description": "Tree-sitter parser for CartoCSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx tree-sitter test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sjord/tree-sitter-cartocss.git"
+  },
+  "keywords": [
+    "cartocss",
+    "mapnik",
+    "cartocss",
+    "openstreetmap",
+    "gis"
+  ],
+  "author": "Sjoerd Langkemper",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Sjord/tree-sitter-cartocss/issues"
+  },
+  "homepage": "https://github.com/Sjord/tree-sitter-cartocss#readme",
+  "dependencies": {
+    "nan": "^2.15.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.4"
+  }
+}
