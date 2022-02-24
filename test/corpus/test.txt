@@ -1,0 +1,168 @@
+================================================================================
+Simple layer multiple values
+================================================================================
+
+#somelayer {
+    line-dasharray: 2,4;
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (statement
+    (ruleset
+      (selectors
+        (selector
+          (layer
+            (identifier))))
+      (ruleset_body
+        (declarations
+          (declaration
+            (property
+              (identifier))
+            (values
+              (value
+                (expression
+                  (exp_term
+                    (factor
+                      (number)))))
+              (value
+                (expression
+                  (exp_term
+                    (factor
+                      (number))))))))))))
+
+================================================================================
+Equals filter
+================================================================================
+
+#addresses {
+    ["addr_housenumber" = null] {
+    }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (statement
+    (ruleset
+      (selectors
+        (selector
+          (layer
+            (identifier))))
+      (ruleset_body
+        (ruleset
+          (selectors
+            (selector
+              (filter
+                (string)
+                (comparison)))))))))
+
+================================================================================
+Double selector
+================================================================================
+
+#building-text {
+  [zoom >= 14][way_pixels > 3000],
+  [zoom >= 17] {
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (statement
+    (ruleset
+      (selectors
+        (selector
+          (layer
+            (identifier))))
+      (ruleset_body
+        (ruleset
+          (selectors
+            (selector
+              (filter
+                (identifier)
+                (comparison)
+                (number))
+              (filter
+                (identifier)
+                (comparison)
+                (number)))
+            (selector
+              (filter
+                (identifier)
+                (comparison)
+                (number)))))))))
+
+================================================================================
+Color variable
+================================================================================
+
+@office: #4863A0;
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (statement
+    (assignment
+      (variable
+        (identifier))
+      (values
+        (value
+          (color
+            (color_hex_long)))))))
+
+================================================================================
+URL
+================================================================================
+
+#somelayer {
+    marker-file: url('symbols/amenity/shelter.svg');
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (statement
+    (ruleset
+      (selectors
+        (selector
+          (layer
+            (identifier))))
+      (ruleset_body
+        (declarations
+          (declaration
+            (property
+              (identifier))
+            (values
+              (value
+                (url
+                  (url_value
+                    (string)))))))))))
+
+================================================================================
+Extra comma
+================================================================================
+
+#somelayer {
+  ["telescope:type" = null], {
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (statement
+    (ruleset
+      (selectors
+        (selector
+          (layer
+            (identifier))))
+      (ruleset_body
+        (ruleset
+          (selectors
+            (selector
+              (filter
+                (string)
+                (comparison)))))))))
