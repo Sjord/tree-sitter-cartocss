@@ -1,0 +1,41 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "cartocss",
+      "camelcase": "CartoCSS",
+      "title": "CartoCSS",
+      "scope": "source.cartocss",
+      "file-types": [
+        "mss"
+      ],
+      "injection-regex": "^cartocss$",
+      "class-name": "TreeSitterCartocss"
+    }
+  ],
+  "metadata": {
+    "version": "0.0.1",
+    "license": "Apache-2.0",
+    "description": "Cartocss grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "Sjoerd Langkemper",
+        "url": "https://www.sjoerdlangkemper.nl/"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/Sjord/tree-sitter-cartocss",
+      "funding": ""
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "java": false,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
